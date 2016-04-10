@@ -1,7 +1,7 @@
 "设置Vundle插件配置
 set nocompatible              " be iMproved, required
 filetype off                  " required
-set rtp+=~/.myvim/bundle/Vundle.vim
+set rtp+=~/myvim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
