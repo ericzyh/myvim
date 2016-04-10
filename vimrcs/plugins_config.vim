@@ -1,7 +1,7 @@
 "设置Vundle插件配置
 set nocompatible              " be iMproved, required
 filetype off                  " required
-set rtp+=~/myvim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -21,7 +21,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'The-NERD-Commenter'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
-source ~/.vim/vimrcs/php.vim
+source ~/myvim/vimrcs/php.vim
 
 call vundle#end()            " required
 filetype plugin indent on    " required
