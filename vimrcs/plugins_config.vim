@@ -21,6 +21,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'The-NERD-Commenter'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'rizzatti/dash.vim'
 source ~/myvim/vimrcs/php.vim
 
 call vundle#end()            " required

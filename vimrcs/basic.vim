@@ -394,3 +394,40 @@ endfunction
 if has("autocmd")
    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 程序开发配置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"ctags目录设置
+set tags=tags;
+set autochdir
+
+""设置cscope快捷键ctrl+shift+-+ s|g|c|t|e|f|i|d
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>      " 查找函数名、宏、枚举值等出现的地方
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>      " 查找函数、宏、枚举等定义的位置，类似ctags所提供的功能
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>      " 查找本函数调用的函数
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>      " 查找调用本函数的函数
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>      " 查找指定的字符串
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>      " 查找egrep模式，相当于egrep功能，但查找速度快多了
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>      " 查找并打开文件，类似vim的find功能
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>    " 查找包含本文件的文件
+
+"自动加载cscope.out数据库
+if has("cscope")  
+	set csprg=/usr/local/bin/cscope  
+	set csto=0  
+	set cst  
+	set csverb  
+	set cspc=3  
+	"add any database in current dir  
+	if filereadable("cscope.out")  
+		cs add cscope.out  
+		"else search cscope.out elsewhere  
+	else  
+		let cscope_file=findfile("cscope.out", ".;")  
+		let cscope_pre=matchstr(cscope_file, ".*/")  
+		if !empty(cscope_file) && filereadable(cscope_file)  
+			exe "cs add" cscope_file cscope_pre  
+		endif        
+	endif  
+endif  
