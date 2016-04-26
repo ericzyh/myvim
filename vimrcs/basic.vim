@@ -2,8 +2,8 @@
 set number
 
 "display tabs and trailing spaces
-set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+"set list
+"set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 " Sets how many lines of history VIM has to remember
 set history=500
