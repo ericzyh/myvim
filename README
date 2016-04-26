@@ -3,3 +3,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/myvim/bundle/Vundle.vim
 
 复制配置文件到根目录下
 cp ~/myvim/vimrc ~/.vimrc
+
+下载插件到本地
+vim +PluginInstall
