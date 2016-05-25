@@ -431,3 +431,6 @@ if has("cscope")
 		endif        
 	endif  
 endif  
+
+"解决粘贴代码混乱
+set pastetoggle=<F9>
