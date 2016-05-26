@@ -434,3 +434,6 @@ endif
 
 "解决粘贴代码混乱
 set pastetoggle=<F9>
+
+"折叠设置
+set foldmethod=marker
