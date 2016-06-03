@@ -22,6 +22,14 @@ Plugin 'The-NERD-Commenter'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+if has('mac')
+Plugin 'Valloric/YouCompleteMe'
+endif
+
 source ~/myvim/vimrcs/php.vim
 
 call vundle#end()            " required
@@ -59,3 +67,12 @@ let g:ctrlp_funky_syntax_highlight = 1
 nmap tt :TagbarToggle<CR>
 
 let g:dash_map = ['java','php','js']
+
+"YCM
+if has("mac")
+    let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+endif
+
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
