@@ -25,6 +25,9 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'brookhong/DBGPavim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'yonchu/accelerated-smooth-scroll'
 
 if has('mac')
 Plugin 'Valloric/YouCompleteMe'
@@ -76,3 +79,7 @@ endif
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"DBGPavim
+let g:dbgPavimPort = 9000
+let g:dbgPavimBreakAtEntry = 0

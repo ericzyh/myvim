@@ -104,7 +104,9 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme molokai
+     let g:molokai_original = 1
+     let g:rehash256 = 1
 catch
 endtry
 
