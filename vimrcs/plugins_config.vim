@@ -28,6 +28,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'brookhong/DBGPavim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'yonchu/accelerated-smooth-scroll'
+Plugin 'ianva/vim-youdao-translater'
 
 if has('mac')
 Plugin 'Valloric/YouCompleteMe'
@@ -83,3 +84,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "DBGPavim
 let g:dbgPavimPort = 9000
 let g:dbgPavimBreakAtEntry = 0
+
+"有道词典插件
+vnoremap <silent> <C-T> :<C-u>Ydv<CR>
+nnoremap <silent> <C-T> :<C-u>Ydc<CR>
+noremap <leader>yd :<C-u>Yde<CR>
