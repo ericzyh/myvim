@@ -86,6 +86,6 @@ let g:dbgPavimPort = 9000
 let g:dbgPavimBreakAtEntry = 0
 
 "有道词典插件
-vnoremap <silent> <C-T> :<C-u>Ydv<CR>
-nnoremap <silent> <C-T> :<C-u>Ydc<CR>
+vnoremap <silent> <C-Y> :<C-u>Ydv<CR>
+nnoremap <silent> <C-Y> :<C-u>Ydc<CR>
 noremap <leader>yd :<C-u>Yde<CR>
