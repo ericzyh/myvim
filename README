@@ -2,7 +2,7 @@
 git clone https://github.com/ericzyh/myvim.git 
 
 安装Vundle插件
-git clone https://github.com/VundleVim/Vundle.vim.git ~/myvim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 创建.vim文件放置插件和配置
 mkdir ~/.vim
