@@ -1,3 +1,6 @@
+"自动写日志
+map log i\Yii::log("zhaoyuhao:".json_encode());<ESC><LEFT><LEFT>i$
+map zs <S-o>// @author zhaoyuhao <ESC>a<C-R>=strftime('%Y-%m-%d')<CR><ESC><S-^><RIGHT><RIGHT>i
 "设置显示行号
 set number
 
@@ -439,3 +442,12 @@ set pastetoggle=<F9>
 
 "折叠设置
 set foldmethod=marker
+map = :call SetComment() <CR><DOWN><DOWN><S-$>a
+"<S-o>/**<ESC>o*
+function SetComment()
+call append(line("."),"     */ ")
+call append(line("."),"     * @author zhaoyuhao " . strftime('%Y-%m-%d'))
+call append(line("."),"     * ")
+call append(line("."),"     * ")
+call append(line("."),"    /**")
+endfunction
